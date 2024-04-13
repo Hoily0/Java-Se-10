@@ -1,6 +1,5 @@
 package day3.com.itheima.random;
 
-import javax.print.attribute.standard.PrinterMakeAndModel;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,7 +22,7 @@ public class Case02 {
             if (num > key){
                 System.out.println("猜大了");
                 num = sc.nextInt();
-            }else if(num < key){
+            }else {
                 System.out.println("猜小了");
                 num = sc.nextInt();
             }
