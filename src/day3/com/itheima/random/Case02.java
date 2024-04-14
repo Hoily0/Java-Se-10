@@ -12,7 +12,6 @@ public class Case02 {
         Scanner sc = new Scanner(System.in);
         Random rd = new Random();
 
-
         int key = rd.nextInt(100) + 1;
 
         System.out.println("请输入数据");
@@ -22,12 +21,12 @@ public class Case02 {
             if (num > key){
                 System.out.println("猜大了");
                 num = sc.nextInt();
+
             }else {
                 System.out.println("猜小了");
                 num = sc.nextInt();
             }
         }
-
             System.out.println("猜对了，答案是" +key+ "游戏终止");
 
 

@@ -1,7 +1,10 @@
 package day3.work;
 
+import java.sql.Array;
 import java.sql.Time;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Day3 {
 
@@ -137,4 +140,171 @@ public class Day3 {
     }
 
 
+    public static void head6(){
+
+        Scanner sc = new Scanner(System.in);
+
+        int income = sc.nextInt();
+
+        if (income >= 5000){
+
+            int tax = 0;
+            int seria = 0;
+            int netIncome = income - 5000 - income / 10;
+            System.out.println("去除三险一金后剩余"+(netIncome+5000));
+
+            if (netIncome <= 3000){
+                seria ++;
+            } else if (netIncome > 3000 && netIncome <= 12000) {
+                seria = seria + 2;
+            } else if (netIncome > 12000 && netIncome <= 25000){
+                seria = seria + 3;
+            } else if (netIncome > 25000 && netIncome <= 35000) {
+                seria = seria + 4;
+            } else if (netIncome > 35000 && netIncome <= 55000) {
+                seria = seria + 5;
+            }else if (netIncome > 55000 && netIncome <= 80000){
+                seria = seria + 6;
+            } else if (netIncome > 80000) {
+                seria = seria + 7;
+            }
+
+
+            int tax1 = 0;
+            int tax2 = 0;
+            int tax3 = 0;
+            int tax4 = 0;
+            int tax5 = 0;
+            int tax6 = 0;
+            int tax7 = 0;
+
+            switch (seria){
+                case 7:
+                     tax7 = (netIncome - 80000) / 100 * 45;
+                    System.out.println("45%税部分："+tax7);
+                case 6:
+                    tax6 = (netIncome - 55000) / 100 * 35 ;
+                    System.out.println("35%税部分："+tax6);
+                case 5:
+                     tax5 = (netIncome - 35000) / 100 * 30 ;
+                    System.out.println("30%税部分："+tax5);
+                case 4:
+                     tax4 = (netIncome - 25000) / 100 * 25 ;
+                    System.out.println("25%税部分："+tax4);
+                case 3:
+                     tax3 = (netIncome - 12000) / 100 * 20 ;
+                    System.out.println("20%税部分："+tax3);
+                case 2:
+                     tax2 = (netIncome -3000) / 100 * 10 ;
+                    System.out.println("10%税部分："+tax2);
+                case 1:
+                     tax1 = 3000 / 100 * 3 ;
+                    System.out.println("3%税部分："+tax1);
+
+            }
+            tax = tax1 + tax2 + tax3 + tax4 + tax5 + tax6 + tax7;
+            System.out.println(tax);
+        }
+
+    }
+
+
+
+    public static void head7() {
+
+      int[] years = IntStream.rangeClosed(1949, 2019).toArray();
+
+      for (int year : years) {
+          if ((2019 - year) % 12 == 0){
+              System.out.println(year);
+          }
+      }
+
+//        for (int year = 2019; year > 1949; year -= 12){
+//            System.out.println(year);
+//
+//        }
+    }
+
+
+    public static void head8() {
+        for (int i = 0; i < 4; i++) {
+            System.out.println();
+            for (int j = 0; j < 5; j++) {
+                System.out.print("@");
+            }
+        }
+
+    }
+
+
+    public static void head9() {
+        for (int i = 0; i <= 5; i++) {
+            System.out.println();
+            for (int i1 = 0; i1 < i; i1++) {
+                System.out.print("@");
+
+            }
+
+        }
+    }
+
+    public static void head10() {
+//        for (int i = 1; i <= 9; i++) {
+//            System.out.println();
+//            for (int i1 = 1; i1 <= i; i1++) {
+//                System.out.print(i + " * " + i1 + " = " + (i * i1));
+//                System.out.print("    ");
+//            }
+//
+//        }
+
+        for (int i = 0; i <= 9; i++) {
+            System.out.println();
+            for (int i1 = 1; i1 <= i; i1++) {
+                System.out.print(i + "*" + i1 + "=" + (i * i1));
+                System.out.print("  ");
+
+            }
+
+        }
+    }
+
+    public static void head11() {
+        int sum = 10;
+        for (int i = 0; i < sum / 1; i++) {
+
+            System.out.println("1元：" + "5毛");
+            System.out.println(i+"   "+(sum -i) * 2);
+
+        }
+    }
+
+
+    public static void head12() {
+        int count = 0;
+        for (int year = 1988; year < 2019; year++) {
+            if ((year % 4 == 0 ) && (year % 100 != 0) || (year % 400 == 0)){
+                System.out.println(year);
+                count ++;
+            }
+
+        }
+        System.out.println(count);
+    }
+
+
+    public static void head13() {
+
+        int fullBucket = 10;
+        int runningWater = 3;
+        int time = 0;
+
+        while (fullBucket  >=   (time * 1) * time -  runningWater * time - 10) {
+
+            time ++;
+        }
+        System.out.println(time);
+    }
 }
+
