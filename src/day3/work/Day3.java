@@ -300,7 +300,7 @@ public class Day3 {
         int runningWater = 3;
         int time = 0;
 
-        while (fullBucket  >=   (time * 1) * time -  runningWater * time - 10) {
+        while (fullBucket  >=   (time * 1) * time -  runningWater * time) {
 
             time ++;
         }
