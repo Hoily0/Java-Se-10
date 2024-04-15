@@ -1,4 +1,4 @@
-package day4.com.itheima;
+package itheima;
 
 import java.util.Scanner;
 

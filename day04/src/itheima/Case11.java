@@ -1,4 +1,4 @@
-package day4.com.itheima;
+package itheima;
 
 public class Case11 {
     public static void main(String[] args) {
@@ -8,42 +8,42 @@ public class Case11 {
         int[] nums = {10, 20, 30, 40, 50};
         int[] reverse = new int[5];
 
-//        System.out.print("[");
-//        for (int i = 0; i <= nums.length - 1; i++) {
+        System.out.print("[");
+        for (int i = 0; i <= nums.length - 1; i++) {
+
+            reverse[i] = nums[nums.length - i -1 ];
+            System.out.print(reverse[i]);
+
+            if (i != nums.length - 1){
+                System.out.print(",");
+            }
+        }
+
+
+//        int count = 0;
+//        int i;
+//        for ( i = 0; i < nums.length ; i++) {
 //
-//            reverse[i] = nums[nums.length - i -1 ];
-//            System.out.print(reverse[i]);
+//            int temp = nums[i];
+//            nums[i] = nums[nums.length -1 -i];
+//            nums[nums.length - 1 - i] = temp;
+//            count ++;
 //
-//            if (i != nums.length - 1){
-//                System.out.print(",");
+//            if (count >= (nums.length - 1) /2 ){
+//                break;
 //            }
 //        }
-
-
-        int count = 0;
-        int i;
-        for ( i = 0; i < nums.length ; i++) {
-
-            int temp = nums[i];
-            nums[i] = nums[nums.length -1 -i];
-            nums[nums.length - 1 - i] = temp;
-            count ++;
-
-            if (count >= (nums.length - 1) /2 ){
-                break;
-            }
-        }
-        System.out.print("[");
-
-        for (int i1 = 0; i1 < nums.length; i1++) {
-            if (i1 < nums.length -1){
-                System.out.print(nums[i1]+", ");
-            }
-            else {
-                System.out.print(nums[i1]);
-            }
-        }
-        System.out.println("]");
+//        System.out.print("[");
+//
+//        for (int i1 = 0; i1 < nums.length; i1++) {
+//            if (i1 < nums.length -1){
+//                System.out.print(nums[i1]+", ");
+//            }
+//            else {
+//                System.out.print(nums[i1]);
+//            }
+//        }
+//        System.out.println("]");
 
     }
 }

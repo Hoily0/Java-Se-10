@@ -1,4 +1,4 @@
-package day4.com.itheima;
+package itheima;
 
 public class Case04 {
     public static void main(String[] args) {

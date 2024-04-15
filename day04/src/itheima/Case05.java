@@ -1,4 +1,4 @@
-package day4.com.itheima;
+package itheima;
 
 /**
  * 动态初始化数组: 数据类型[] 数组名 = new 数据类型[长度];
