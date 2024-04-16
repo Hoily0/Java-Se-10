@@ -78,6 +78,7 @@ public class Day4 {
 
 
     public static void head6() {
+
         int[] nums = new int[10];
         int[] oddNumber = new int[10];
 
