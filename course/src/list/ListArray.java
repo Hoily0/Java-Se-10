@@ -2,7 +2,7 @@ package list;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.SimpleTimeZone;
+
 
 public class ListArray {
     public static void main(String[] args) {
