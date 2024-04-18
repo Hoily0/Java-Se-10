@@ -1,5 +1,4 @@
 import work.day7.Day7;
-import work.day7.entity.Phone;
 
 public class Main7 {
     public static void main(String[] args) {
