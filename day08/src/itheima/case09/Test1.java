@@ -1,5 +1,7 @@
-package com.itheima.case09;
+package itheima.case09;
 
+
+import java.util.ArrayList;
 
 /*
     ArrayList应用案例
@@ -15,5 +17,44 @@ package com.itheima.case09;
 public class Test1 {
     public static void main(String[] args) {
 
+        ArrayList<String> list = new ArrayList<>();
+        list.add("java入门");
+        list.add("宁夏枸杞");
+        list.add("黑枸杞");
+        list.add("人字拖");
+        list.add("特级枸杞");
+        list.add("枸杞子");
+
+        System.out.println(list);
+//        deleteByNameOne(list);
+        deleteByNameTwo(list);
+
+
+        System.out.println("list = " + list);
     }
+
+    private static void deleteByNameTwo(ArrayList<String> list) {
+        for (int i = list.size() -1; i >= 0; i--) {
+            if (list.get(i).contains("枸杞")){
+                list.remove(i);
+            }
+
+        }
+    }
+
+    private static void   deleteByNameOne(ArrayList<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).contains("枸杞")){
+                list.remove(i);
+                i --;
+
+            }
+        }
+    }
+
+
+
+
 }
+
+

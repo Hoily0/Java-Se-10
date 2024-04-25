@@ -1,4 +1,8 @@
-package com.itheima.case05;
+package itheima.case05;
+
+import java.util.Scanner;
+
+
 
 /*
   登录案例
@@ -16,6 +20,32 @@ package com.itheima.case05;
 public class Test {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+        while (count < 2){
+            String userName = sc.next();
+            String passWord = sc.next();
+
+            boolean result = login(userName, passWord);
+            if (result){
+                System.out.println("登录成功");
+                break;
+            }else {
+                System.out.println("登录失败");
+                count ++;
+            }
+        }
+
+    }
+
+    private static boolean login(String userName, String passWord) {
+        String trueUserName = "admin";
+        String truePassWord = "12345";
+
+        if (trueUserName.equals(userName) && truePassWord.equals(passWord)){
+            return true;
+        }
+        return false;
     }
 
 }

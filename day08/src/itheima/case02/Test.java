@@ -1,4 +1,4 @@
-package com.itheima.case02;
+package itheima.case02;
 
 /**
  * 创建字符串对象

@@ -1,4 +1,6 @@
-package com.itheima.case06;
+package itheima.case06;
+
+import java.util.Random;
 
 /**
  * 开发验证码
@@ -18,6 +20,21 @@ package com.itheima.case06;
 public class Test {
     public static void main(String[] args) {
 
+        String  result = createCode(36);
+        System.out.println(result);
+
+
+    }
+
+    private static String createCode(int number) {
+        String code = "";
+        String data = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        Random rd = new Random();
+
+        for (int i = 0; i < number; i++) {
+            code += data.charAt(rd.nextInt(data.length()));
+        }
+        return code;
 
     }
 

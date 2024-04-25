@@ -1,4 +1,4 @@
-package com.itheima.case09;
+package itheima.case09;
 
 
 /*
