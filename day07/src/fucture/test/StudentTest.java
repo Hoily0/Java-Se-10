@@ -6,8 +6,8 @@ import fucture.mapper.StudentMapper;
 public class StudentTest {
     public static void main(String[] args) {
 
-       StudentController studentController = new StudentController();
-       studentController.findAll();
+//       StudentController studentController = new StudentController();
+//       studentController.findAll();
 
         StudentMapper studentMapper = new StudentMapper();
         System.out.println(studentMapper.find());
